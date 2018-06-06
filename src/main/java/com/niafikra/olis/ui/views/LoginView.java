@@ -1,9 +1,8 @@
 package com.niafikra.olis.ui.views;
 
-import com.niafikra.olis.ui.components.LoginForm;
+import com.niafikra.olis.ui.templates.LoginForm;
 import com.vaadin.flow.component.dependency.HtmlImport;
 import com.vaadin.flow.component.html.Div;
-import com.vaadin.flow.component.html.NativeButton;
 import com.vaadin.flow.router.PageTitle;
 import com.vaadin.flow.router.Route;
 import com.vaadin.flow.theme.Theme;

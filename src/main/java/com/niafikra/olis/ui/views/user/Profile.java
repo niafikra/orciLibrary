@@ -1,5 +1,6 @@
 package com.niafikra.olis.ui.views.user;
 
+import com.niafikra.olis.ui.components.UserProfile;
 import com.vaadin.flow.component.dependency.HtmlImport;
 import com.vaadin.flow.component.html.Div;
 import com.vaadin.flow.component.html.Label;
@@ -18,24 +19,10 @@ import com.vaadin.flow.component.html.*;
 @Theme(Lumo.class)
 public class Profile extends Div {
 
-    private H2 fullname;
-    private Image userimage;
 
     public Profile() {
         setClassName("profile");
 
-        fullname = new H2("Chloe Michael Steel");
-        userimage = new Image();
-        userimage.setSrc("frontend/images/samples/profile.jpg");
-        userimage.setAlt("Profile Picture");
-        userimage.setClassName("profile-sample");
-
-        HorizontalLayout topdetails = new HorizontalLayout(userimage, fullname);
-
-        VerticalLayout segments = new VerticalLayout(topdetails);
-
-        FlexLayout flex = new FlexLayout(segments);
-
-        add(flex);
+        add(new UserProfile());
     }
 }
