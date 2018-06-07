@@ -1,8 +1,12 @@
 package com.niafikra.olis.ui.components;
 
+import com.niafikra.olis.model.Notification;
 import com.vaadin.flow.component.Component;
 import com.vaadin.flow.component.Tag;
+import com.vaadin.flow.component.grid.Grid;
+import com.vaadin.flow.component.grid.GridSelectionModel;
 import com.vaadin.flow.component.html.*;
+import com.vaadin.flow.component.icon.Icon;
 import com.vaadin.flow.component.orderedlayout.FlexComponent;
 import com.vaadin.flow.component.orderedlayout.HorizontalLayout;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
@@ -14,18 +18,19 @@ public class UserProfile extends Div {
     private Paragraph email;
     private Paragraph phone;
     private Paragraph sexStatus;
-    private Anchor editlink;
+    private NativeButton editlink;
     private Div detailcontainer;
 
     public UserProfile() {
+        setClassName("container");
+
         fullname = new H2("Chloe Michael Steel");
         email = new Paragraph("chloesullivan12@live.com");
         phone = new Paragraph("+1-111-222");
         sexStatus = new Paragraph("Female, Librarian");
 
-        editlink = new Anchor();
+        editlink = new NativeButton("Edit");
         editlink.setText("Edit");
-        editlink.setHref("profile/edit");
         editlink.setClassName("edit-btn");
 
         userimage = new Image();
@@ -36,17 +41,33 @@ public class UserProfile extends Div {
 
         detailcontainer = new Div();
         detailcontainer.setClassName("user-details");
-        detailcontainer.add(fullname, email, phone, sexStatus);
+        detailcontainer.add(fullname, email, phone, sexStatus, editlink);
 
         VerticalLayout userdetails = new VerticalLayout(detailcontainer);
+        userdetails.setAlignItems(FlexComponent.Alignment.CENTER);
         userdetails.setClassName("profile-user-details");
 
-        HorizontalLayout topdetails = new HorizontalLayout(userimage, userdetails, editlink);
+        HorizontalLayout topdetails = new HorizontalLayout(userimage, userdetails);
+        topdetails.setMargin(true);
 
-        VerticalLayout segments = new VerticalLayout(topdetails);
+        Grid<Notification> grid = new Grid<>();
+//        grid.setItems(getItems());
+
+        grid.addColumn(Notification::getDateSubmmited).setHeader("Date");
+        grid.addColumn(Notification::getNote).setHeader("Message");
+        grid.setSizeFull();
+
+
+        VerticalLayout segments = new VerticalLayout(topdetails, grid);
         segments.setAlignItems(FlexComponent.Alignment.CENTER);
+        segments.setClassName("profile");
+
 
         add(segments);
 
+    }
+
+    private Notification getItems() {
+        return null;
     }
 }
