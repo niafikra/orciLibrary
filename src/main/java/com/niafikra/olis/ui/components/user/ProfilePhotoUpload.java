@@ -26,8 +26,6 @@ public class ProfilePhotoUpload extends VerticalLayout {
     public ProfilePhotoUpload(Object contrrolView) {
         this.controlView = contrrolView;
         simpleupload();
-
-
     }
 
     private void simpleupload() {
