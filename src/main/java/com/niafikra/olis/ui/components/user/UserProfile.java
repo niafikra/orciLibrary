@@ -1,18 +1,15 @@
 package com.niafikra.olis.ui.components.user;
 
 import com.niafikra.olis.model.Notification;
-import com.vaadin.flow.component.Component;
 import com.vaadin.flow.component.Tag;
 import com.vaadin.flow.component.button.Button;
 import com.vaadin.flow.component.grid.Grid;
-import com.vaadin.flow.component.grid.GridSelectionModel;
 import com.vaadin.flow.component.html.*;
 import com.vaadin.flow.component.icon.Icon;
 import com.vaadin.flow.component.icon.VaadinIcons;
 import com.vaadin.flow.component.orderedlayout.FlexComponent;
 import com.vaadin.flow.component.orderedlayout.HorizontalLayout;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
-import org.springframework.beans.factory.annotation.Autowired;
 
 @Tag("div")
 public class UserProfile extends Div {
@@ -24,7 +21,6 @@ public class UserProfile extends Div {
     private Button editlink;
     private Div detailcontainer;
     private ProfileEditorDialog editorDialog = new ProfileEditorDialog(this);
-
 
 
     public UserProfile() {

@@ -20,6 +20,7 @@ public class ProfileEditorDialog extends Dialog {
     private TextField lastName = new TextField("Last Name:");
     private TextField phoneNo = new TextField("Phone Number:");
     private TextField email = new TextField("Email:");
+    private Image userimage = new Image();
     private ComboBox<SexItems> sex = new ComboBox("Sex:");
     private Button save = new Button(" Save");
     private Button cancel = new Button(new Icon(VaadinIcons.CLOSE));
@@ -41,15 +42,23 @@ public class ProfileEditorDialog extends Dialog {
 
         cancel.setText(" Cancel");
         save.setIcon(new Icon(VaadinIcons.CHECK));
+
         save.getElement().setAttribute("theme", "primary");
+        cancel.getElement().setAttribute("theme", "error");
 
         HorizontalLayout buttons = new HorizontalLayout(save, cancel);
+
         FormLayout profileForm = new FormLayout(
                 new VerticalLayout(title, firstName,
                         lastName, middleName, lastName, email, phoneNo, sex, buttons)
         );
 
-        VerticalLayout imagecontainer = new VerticalLayout(new H4("Change profile photo"), profilePhotoUpload);
+        userimage.setSrc("frontend/images/samples/profile.jpg");
+        userimage.setAlt("Profile Picture");
+        userimage.getElement().setAttribute("width","100vw");
+
+        VerticalLayout imagecontainer = new VerticalLayout(new H4("Change profile photo"), userimage,
+                profilePhotoUpload);
         imagecontainer.setMargin(true);
 
         add(new HorizontalLayout(profileForm, imagecontainer));
