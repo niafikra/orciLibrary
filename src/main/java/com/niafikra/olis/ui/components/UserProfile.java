@@ -3,10 +3,12 @@ package com.niafikra.olis.ui.components;
 import com.niafikra.olis.model.Notification;
 import com.vaadin.flow.component.Component;
 import com.vaadin.flow.component.Tag;
+import com.vaadin.flow.component.button.Button;
 import com.vaadin.flow.component.grid.Grid;
 import com.vaadin.flow.component.grid.GridSelectionModel;
 import com.vaadin.flow.component.html.*;
 import com.vaadin.flow.component.icon.Icon;
+import com.vaadin.flow.component.icon.VaadinIcons;
 import com.vaadin.flow.component.orderedlayout.FlexComponent;
 import com.vaadin.flow.component.orderedlayout.HorizontalLayout;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
@@ -18,7 +20,7 @@ public class UserProfile extends Div {
     private Paragraph email;
     private Paragraph phone;
     private Paragraph sexStatus;
-    private NativeButton editlink;
+    private Button editlink;
     private Div detailcontainer;
 
     public UserProfile() {
@@ -29,7 +31,7 @@ public class UserProfile extends Div {
         phone = new Paragraph("+1-111-222");
         sexStatus = new Paragraph("Female, Librarian");
 
-        editlink = new NativeButton("Edit");
+        editlink = new Button(new Icon(VaadinIcons.PENCIL));
         editlink.setText("Edit");
         editlink.setClassName("edit-btn");
 
@@ -51,6 +53,7 @@ public class UserProfile extends Div {
         topdetails.setMargin(true);
 
         Grid<Notification> grid = new Grid<>();
+        grid.setItems(new Notification());
 //        grid.setItems(getItems());
 
         grid.addColumn(Notification::getDateSubmmited).setHeader("Date");
