@@ -22,7 +22,6 @@ public class UserProfile extends Div {
     private Div detailcontainer;
     private ProfileEditorDialog editorDialog = new ProfileEditorDialog(this);
 
-
     public UserProfile() {
         setClassName("container");
 
@@ -64,6 +63,7 @@ public class UserProfile extends Div {
         grid.setSizeFull();
 
 
+
         VerticalLayout segments = new VerticalLayout(topdetails, grid);
         segments.setAlignItems(FlexComponent.Alignment.CENTER);
         segments.setClassName("profile");
@@ -72,8 +72,6 @@ public class UserProfile extends Div {
         add(segments);
 
     }
-
-
 
 
 }
