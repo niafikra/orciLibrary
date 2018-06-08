@@ -53,7 +53,7 @@ public class ProfileEditorDialog extends Dialog {
                         lastName, middleName, lastName, email, phoneNo, sex, buttons)
         );
 
-        userimage.setSrc("frontend/images/samples/profile.jpg");
+        userimage.setSrc("frontend/images/samples/default.png");
         userimage.setAlt("Profile Picture");
         userimage.getElement().setAttribute("width","100vw");
 

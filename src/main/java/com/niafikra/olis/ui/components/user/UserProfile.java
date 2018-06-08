@@ -39,7 +39,7 @@ public class UserProfile extends Div {
         });
 
         userimage = new Image();
-        userimage.setSrc("frontend/images/samples/profile.jpg");
+        userimage.setSrc("frontend/images/samples/default.png");
         userimage.setAlt("Profile Picture");
         userimage.setClassName("profile-sample");
 
@@ -72,6 +72,8 @@ public class UserProfile extends Div {
         add(segments);
 
     }
+
+
 
 
 }
