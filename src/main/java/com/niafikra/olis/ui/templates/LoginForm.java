@@ -36,7 +36,7 @@ public class LoginForm extends PolymerTemplate<LoginForm.LoginModel> {
     }
 
     public void login() {
-        loginBtn.getUI().ifPresent(ui -> ui.navigate("home"));
+        loginBtn.getUI().ifPresent(ui -> ui.navigate("dashboard"));
 //        Notification.show("Hello " + username.getValue() + " with " + password.getValue() + " ", 5000, Notification.Position.MIDDLE);
     }
 }

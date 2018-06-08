@@ -17,7 +17,7 @@ import com.vaadin.flow.component.textfield.TextField;
 
 public class CatalogCrudForm extends Dialog {
 
-    private H3 formtitle = new H3("Catalog Manager");
+    private H3 formtitle = new H3("CatalogView Manager");
     private TextField title = new TextField("Title");
     private TextField author = new TextField("Author");
     private TextField publisher = new TextField("Publisher");
