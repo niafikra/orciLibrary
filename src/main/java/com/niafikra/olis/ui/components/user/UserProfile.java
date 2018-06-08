@@ -11,6 +11,9 @@ import com.vaadin.flow.component.orderedlayout.FlexComponent;
 import com.vaadin.flow.component.orderedlayout.HorizontalLayout;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 
+import java.util.ArrayList;
+import java.util.List;
+
 @Tag("div")
 public class UserProfile extends Div {
     private H2 fullname;
@@ -71,6 +74,10 @@ public class UserProfile extends Div {
 
         add(segments);
 
+    }
+
+    private void defaultData(){
+        List<String> user = new ArrayList<String>();
     }
 
 
