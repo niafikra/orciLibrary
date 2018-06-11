@@ -1,4 +1,4 @@
-package com.niafikra.olis.ui.components.catalogue;
+package com.niafikra.olis.ui.components.subjects;
 
 import com.vaadin.flow.component.checkbox.Checkbox;
 import com.vaadin.flow.component.html.Div;

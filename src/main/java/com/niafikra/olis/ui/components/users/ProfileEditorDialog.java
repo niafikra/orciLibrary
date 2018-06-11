@@ -1,4 +1,4 @@
-package com.niafikra.olis.ui.components.user;
+package com.niafikra.olis.ui.components.users;
 
 import com.niafikra.olis.predefinedmodels.SexItems;
 import com.vaadin.flow.component.button.Button;

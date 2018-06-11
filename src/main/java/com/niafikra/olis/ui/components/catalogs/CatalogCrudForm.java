@@ -1,7 +1,8 @@
-package com.niafikra.olis.ui.components.catalogue;
+package com.niafikra.olis.ui.components.catalogs;
 
 import com.niafikra.olis.predefinedmodels.CategoryItems;
 import com.niafikra.olis.predefinedmodels.MaterialItems;
+import com.niafikra.olis.ui.components.subjects.SubjectsFormList;
 import com.vaadin.flow.component.button.Button;
 import com.vaadin.flow.component.combobox.ComboBox;
 import com.vaadin.flow.component.dialog.Dialog;
@@ -37,6 +38,9 @@ public class CatalogCrudForm extends Dialog {
 
     public CatalogCrudForm(Object controlView) {
         this.controlView = controlView;
+
+        setCloseOnEsc(false);
+        setCloseOnOutsideClick(false);
 
         itemcategory.setItems(CategoryItems.values());
         material.setItems(MaterialItems.values());

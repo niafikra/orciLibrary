@@ -1,4 +1,4 @@
-package com.niafikra.olis.ui.components.catalogue;
+package com.niafikra.olis.ui.components.catalogs;
 
 import com.vaadin.flow.component.Tag;
 import com.vaadin.flow.component.button.Button;

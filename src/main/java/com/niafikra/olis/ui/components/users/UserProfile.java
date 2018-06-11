@@ -1,4 +1,4 @@
-package com.niafikra.olis.ui.components.user;
+package com.niafikra.olis.ui.components.users;
 
 import com.niafikra.olis.model.Notification;
 import com.vaadin.flow.component.Tag;
@@ -39,12 +39,12 @@ public class UserProfile extends Div {
 
 
         detailcontainer = new Div();
-        detailcontainer.setClassName("user-details");
+        detailcontainer.setClassName("users-details");
         detailcontainer.add(fullname, email, phone, sexStatus, editlink);
 
         VerticalLayout userdetails = new VerticalLayout(detailcontainer);
         userdetails.setAlignItems(FlexComponent.Alignment.CENTER);
-        userdetails.setClassName("profile-user-details");
+        userdetails.setClassName("profile-users-details");
 
         HorizontalLayout topdetails = new HorizontalLayout(userimage, userdetails);
         topdetails.setMargin(true);

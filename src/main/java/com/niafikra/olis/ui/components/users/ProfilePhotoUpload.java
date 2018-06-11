@@ -1,4 +1,4 @@
-package com.niafikra.olis.ui.components.user;
+package com.niafikra.olis.ui.components.users;
 
 import com.vaadin.flow.component.*;
 import com.vaadin.flow.component.html.Div;
@@ -6,7 +6,6 @@ import com.vaadin.flow.component.html.Image;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.component.upload.Upload;
 import com.vaadin.flow.component.upload.receivers.MemoryBuffer;
-import com.vaadin.flow.component.upload.receivers.MultiFileMemoryBuffer;
 import com.vaadin.flow.internal.MessageDigestUtil;
 import com.vaadin.flow.server.StreamResource;
 import org.apache.commons.io.IOUtils;
